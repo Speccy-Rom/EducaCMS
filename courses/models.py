@@ -3,10 +3,12 @@ from django.contrib.auth.models import User
 
 
 class Subject(models.Model):
-    title = models.CharField(max_length=200)
+    title = models.CharField(max_length=200, verbose_name='Наименование')
     slug = models.SlugField(max_length=200, unique=True)
 
     class Meta:
+        # verbose_name = ''
+        # verbose_name_plural = ''
         ordering = ['title']
 
     def __str__(self):
@@ -26,6 +28,8 @@ class Course(models.Model):
     created = models.DateTimeField(auto_now_add=True)
 
     class Meta:
+        # verbose_name = ''
+        # verbose_name_plural = ''
         ordering = ['-created']
 
     def __str__(self):
