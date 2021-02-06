@@ -36,7 +36,7 @@ class OwnerCourseEditMixin(OwnerCourseMixin, OwnerEditMixin):
 
 
 class ManageCourseListView(OwnerCourseMixin, ListView):
-    template_name = 'manage/course/list.html'
+    template_name = 'courses/manage/course/list.html'
 
 
 class CourseCreateView(PermissionRequiredMixin,
@@ -54,13 +54,13 @@ class CourseUpdateView(PermissionRequiredMixin,
 class CourseDeleteView(PermissionRequiredMixin,
                        OwnerCourseMixin,
                        DeleteView):
-    template_name = 'manage/course/delete.html'
+    template_name = 'courses/manage/course/delete.html'
     success_url = reverse_lazy('manage_course_list')
     permission_required = 'courses.delete_course'
 
 
 class CourseModuleUpdateView(TemplateResponseMixin, View):
-    template_name = 'manage/module/formset.html'
+    template_name = 'courses/manage/module/formset.html'
     course = None
 
     def get_formset(self, data=None):
@@ -90,7 +90,7 @@ class ContentCreateUpdateView(TemplateResponseMixin, View):
     module = None
     model = None
     obj = None
-    template_name = 'manage/content/form.html'
+    template_name = 'courses/manage/content/form.html'
 
     def get_model(self, model_name):
         if model_name in ['text', 'video', 'image', 'file']:
