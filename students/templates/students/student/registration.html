@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Зарегистрироваться
+{% endblock %}
+
+{% block content %}
+    <h1>
+        Зарегистрироваться
+    </h1>
+    <div class="module">
+        <p>Введите свои данные для создания учетной записи:</p>
+        <form action="" method="post">
+            {{ form.as_p }}
+            {% csrf_token %}
+            <p><input type="submit" value="Создать мой аккаунт"></p>
+        </form>
+    </div>
+{% endblock %}
