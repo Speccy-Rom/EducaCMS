@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django_extensions'
+    'django_extensions',
+    'embed_video'
 ]
 
 MIDDLEWARE = [
@@ -121,5 +122,6 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'courses/static'),
 ]
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+
