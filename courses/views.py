@@ -219,10 +219,6 @@ class CourseListView(TemplateResponseMixin, View):
                                         'courses': courses})
 
 
-class CourseEnrollForm(object):
-    pass
-
-
 class CourseDetailView(DetailView):
     model = Course
     template_name = 'courses/course/detail.html'
