@@ -11,6 +11,8 @@ from django.forms.models import modelform_factory
 from django.apps import apps
 from braces.views import CsrfExemptMixin, JsonRequestResponseMixin
 from django.db.models import Count
+
+from students.forms import CourseEnrollForm
 from .models import Subject, Course, Module, Content
 from .forms import ModuleFormSet
 from django.core.cache import cache
@@ -226,5 +228,5 @@ class CourseDetailView(DetailView):
     def get_context_data(self, **kwargs):
         context = super(CourseDetailView,
                         self).get_context_data(**kwargs)
-        context['enroll_form'] = CourseEnrollForm(initial={'course':self.object})
+        context['enroll_form'] = CourseEnrollForm(initial={'course': self.object})
         return context
