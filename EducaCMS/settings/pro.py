@@ -10,5 +10,14 @@ ADMINS = (
 
 ALLOWED_HOSTS = ['*']
 
-DATABASES = {'default': {}
-             }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'EducaCMS',
+        'USER': 'EducaCMS',
+        'PASSWORD': '123266',
+    }
+}
+
+SECURE_SSL_REDIRECT = True
+CSRF_COOKIE_SECURE = True
