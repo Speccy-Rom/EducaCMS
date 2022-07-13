@@ -10,7 +10,6 @@ API для проекта "Библиотека онлайн фильмов"
   * 
   * 
   * 
-
 Склонируйте репозиторий с помощью git
 
    https://github.com/Speccy-Rom/EducaCMS.git
